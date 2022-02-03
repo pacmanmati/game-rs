@@ -28,7 +28,7 @@ use cgmath::*;
  * let's draw a cube the nasty way then make nice helpers.
  * Return a closure we can call to render the cube.
  */
-fn draw_rotating_cube<'a>(renderer: Rc<RefCell<Renderer>>) -> impl FnMut() + 'a {
+fn draw_rotating_cube(renderer: Rc<RefCell<Renderer>>) -> impl FnMut() {
     let cube = Cube::new();
     // we probably want the shader to take as input:
     // * cube positions
